@@ -49,13 +49,15 @@ Inventory:
 5
 Exit
  */
-import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class GroceryRunner {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
+        Additems addItems = new Additems();
 
         System.out.println("Enter the option :\n" + "\t1.\tAdd an item\n" + //
                 "\t2.\tUpdate an item’s quantity\n" + //
@@ -66,7 +68,7 @@ public class GroceryRunner {
         switch (options) {
             case 1:
                 // Add an item
-
+               addItems.addItem();
                 break;
 
             case 2:
