@@ -50,46 +50,50 @@ Inventory:
 Exit
  */
 
-import java.util.Scanner;
+ import java.util.Scanner;
+ import java.util.ArrayList;
 
-public class GroceryRunner {
-    public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-
-        Additems addItems = new Additems();
-
-        System.out.println("Enter the option :\n" + "\t1.\tAdd an item\n" + //
-                "\t2.\tUpdate an item’s quantity\n" + //
-                "\t3.\tRemove an item\n" + //
-                "\t4.\tView inventory\n" + //
-                "\t5.\tExit ");
-        int options = scanner.nextInt();
-        switch (options) {
-            case 1:
-                // Add an item
-               addItems.addItem();
-                break;
-
-            case 2:
-                // update an item quantity
-                break;
-
-            case 3:
-
-                // Remove an item
-                break;
-
-            case 4:
-                // View Inventory
-                break;
-            case 5:
-                // Exit
-
-            default:
-                System.out.println("Invaild input ! \n \t please give correct input");
-                break;
-        }
-
-    }
-}
+ public class GroceryRunner {
+     public static void main(String[] args) {
+ 
+         Scanner scanner = new Scanner(System.in);
+ 
+         InventoryItems addItems = new InventoryItems();
+         UpdateQuantity addQuantity = new UpdateQuantity();
+ 
+         System.out.println("Enter the option :\n" + "\t1.\tAdd an item\n" + //
+                 "\t2.\tUpdate an item’s quantity\n" + //
+                 "\t3.\tRemove an item\n" + //
+                 "\t4.\tView inventory\n" + //
+                 "\t5.\tExit ");
+         int options = scanner.nextInt();
+         switch (options) {
+             case 1:
+                 // Add an item
+                addItems.addItemUserInput();
+                 break;
+ 
+             case 2:
+                 // update an item quantity
+                 
+                 break;
+ 
+             case 3:
+ 
+                 // Remove an item
+                 break;
+ 
+             case 4:
+                 // View Inventory
+                 break;
+             case 5:
+                 // Exit
+ 
+             default:
+                 System.out.println("Invaild input ! \n \t please give correct input");
+                 break;
+         }
+         scanner.close();
+ 
+     }
+ }
