@@ -21,11 +21,15 @@ public class InventoryItems {
         int itemQuantity = scanner.nextInt();
 
         this.addNewItem(itemName, itemQuantity);
-
-        System.out.println("Entered Item Name: " + name);
-        System.out.println("Entered Item Quantity: " + quantity);
+        this.printNewItems();
 
         scanner.close();
+    }
+
+    public void printNewItems() {
+        System.out.println("Entered Item Name: " + this.name);
+        System.out.println("Entered Item Quantity: " + this.quantity);
+
     }
 
 }
