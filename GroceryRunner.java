@@ -51,7 +51,6 @@ Exit
  */
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class GroceryRunner {
     public static void main(String[] args) {
@@ -59,7 +58,7 @@ public class GroceryRunner {
         Scanner scanner = new Scanner(System.in);
 
         InventoryItems inventoryItems = new InventoryItems();
-        UpdateQuantity addQuantity = new UpdateQuantity();
+        
 
         int options;
 
