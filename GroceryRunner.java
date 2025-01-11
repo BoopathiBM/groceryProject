@@ -79,16 +79,16 @@ public class GroceryRunner {
 
                     break;
 
+
                 case 2:
                     // update an item quantity
-                    // addItems.addquantityUserInput();
-                    System.out.println(" 2 ");
+                    inventoryItems.updateInventory(scanner);
                     break;
 
                 case 3:
 
                     // Remove an item
-                    System.out.println(" 3 ");
+                    inventoryItems.removeInventory(scanner);
                     break;
 
                 case 4:

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class InventoryItems {
+    
     ArrayList<String> name = new ArrayList<>();
     ArrayList<Integer> quantity = new ArrayList<>();
 
@@ -28,18 +29,7 @@ public class InventoryItems {
         System.out.println("Entered Item Quantity: " + this.quantity);
 
     }
-    public void addquantityUserInput() {
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("enter additional Quantity: ");
-
-        int addOnQuantity = scanner.nextInt();
-        addNewQuantity(addOnQuantity);
-        printNewQuantity();
-        scanner.close();
-
-    }
+    
 
     public void printInventory(){
         System.out.println("************ Inventory *************");
@@ -50,22 +40,24 @@ public class InventoryItems {
 
     }
 
-    public void removeInventory(int itemNo){
+    public void removeInventory(Scanner scanner){
+
+        System.out.print("\nEnter item no to remove: ");
+        int itemNo = scanner.nextInt();
         this.name.remove(itemNo);
         this.quantity.remove(itemNo);
     }
 
-    public void updateInventory(int itemNo, int quantity){
+    public void updateInventory(Scanner scanner){
+
+        System.out.print("\nEnter item no to update: ");
+        int itemNo = scanner.nextInt();
+        System.out.print("\nEnter quantity to update: ");
+        int quantity = scanner.nextInt();
          this.quantity.set(itemNo, quantity);
     }
 
-    public void addNewQuantity(Integer addOnQuantity) {
-        this.quantity.add(addOnQuantity);
-       
-    }
-    public void printNewQuantity() {
-        System.out.println("total Quantity: " + this.updatedQuantity);
-
-    }
+    
+    
 
 }
